@@ -23,7 +23,8 @@ binary_tree_t *binary_tree_insert_left(binary_tree_t *parent, int value)
 	if (!new_node)
 		return (NULL); /* memory allocation failed */
 
-	/* if the parent already has a left child, the new node takes it
+	/**
+	 * if the parent already has a left child, the new node takes it
 	 * place
 	 */
 	if (parent->left)
