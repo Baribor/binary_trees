@@ -7,7 +7,7 @@
  *
  * Description: this is a longer description.
  * If parent already has a left-child, the new node must take its place,
- * ...and the old left-child must be set as the left-child of the new node.
+ * and the old left-child must be set as the left-child of the new node.
  * Return: a pointer to the created node, or NULL on failure or if parent is
  * NULL
  */
@@ -37,5 +37,4 @@ binary_tree_t *binary_tree_insert_left(binary_tree_t *parent, int value)
 	parent->left = new_node;
 
 	return (new_node);
-
 }
