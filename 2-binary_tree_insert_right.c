@@ -5,18 +5,18 @@
  * @parent: is a pointer to node to insert the right-child in
  * @value: is the value to store in the new node
  *
- * Return: a pointer to the created node, or NULL on failure or if parent is NULL
- * @Description: if parent already has a right-child, the new node must take..
+ * Description: if parent already has a right-child, the new node must take..
  * 		...its place,and the old right-child must be set as the...
  * 		...right-child of the new node
  */
 binary_tree_t *binary_tree_insert_right(binary_tree_t *parent, int value)
 {
-	if (!parent)
-		return (NULL); /* if parent is NULL */
+	binary_tree_t *new_node;
 
 	/* creating a new node */
-	binary_tree_t *new_node = binary_tree_node(parent, value);
+	new_node = binary_tree_node(parent, value);
+	if (!parent)
+		return (NULL); /* if parent is NULL */
 	if (!new_node)
 		return (NULL); /* memory allocation failed */
 
